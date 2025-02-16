@@ -45,10 +45,6 @@ def one_hot(indices: torch.Tensor, num_classes: int, unsqueeze_indices=True) -> 
     return ret
 
 def GetDataLoader(data_dir):
-    if data_dir == '':
-        data_path = '/public/home/ai_user_2/dbw_data/data100/'
-        cache_dir = '/public/home/ai_user_2/dbw_data/cache100b/'
-        data_dir = [data_path + 'data-{}b-{}b.jsonl'.format(i * 10, (i + 1) * 10) for i in range(10)]
     train_dataset = datasets.load_dataset('json', data_files=data_dir, split="train", cache_dir=cache_dir)
     return train_dataset
 
