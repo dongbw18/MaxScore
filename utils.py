@@ -44,7 +44,7 @@ def one_hot(indices: torch.Tensor, num_classes: int, unsqueeze_indices=True) -> 
     ret.scatter_(-1, indices, 1)
     return ret
 
-def GetDataLoader(data_dir):
+def GetDataLoader(data_dir, cache_dir):
     train_dataset = datasets.load_dataset('json', data_files=data_dir, split="train", cache_dir=cache_dir)
     return train_dataset
 
