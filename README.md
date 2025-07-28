@@ -1,4 +1,4 @@
 # MaxScore
 
-Maximum Score Routing For Mixture-of-Experts [Full Paper](FullPaper.pdf).
+[Maximum Score Routing For Mixture-of-Experts](FullPaper.pdf).
 
